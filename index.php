@@ -44,19 +44,13 @@
                 </div>
             
                 <div class="input-field col s6">
-                    <input id="input_text" type="text" data-length="10" name="FechaInicio" required>
+                    <input id="input_text" type="date" data-length="10" name="FechaInicio" required>
                     <label class="black-text" for="input_text">Fecha: </label>
-                    <?php
-                        echo 'Formato: dd/mm/aa';
-                    ?>
                 </div>
                 
                 <div class="input-field col s6">
-                    <input id="input_text" type="text" data-length="10" name="HoraInicio" required>
+                    <input id="input_text" type="time" data-length="10" name="HoraInicio" required>
                     <label class="black-text" for="input_text">Hora: </label>
-                    <?php
-                        echo 'Formato: hh/mm';
-                    ?>
                 </div>
 
                 <div class="col s12">
@@ -64,19 +58,13 @@
                 </div>
             
                 <div class="input-field col s6">
-                    <input id="input_text" type="text" data-length="10" name="FechaFin" required>
+                    <input id="input_text" type="date" data-length="10" name="FechaFin" required>
                     <label class="black-text" for="input_text">Fecha: </label>
-                    <?php
-                        echo 'Formato: dd/mm/aa';
-                    ?>
                 </div>
                 
                 <div class="input-field col s6">
-                    <input id="input_text" type="text" data-length="10" name="HoraFin" required>
+                    <input id="input_text" type="time" data-length="10" name="HoraFin" required>
                     <label class="black-text" for="input_text">Hora: </label>
-                    <?php
-                        echo 'Formato: hh/mm';
-                    ?>
                 </div>
 
                 <div class="col s12">
@@ -86,13 +74,6 @@
         </form>
     </div>
         
-
-    
-
-
-               
-           
-          
     <!--SCRIPT-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
