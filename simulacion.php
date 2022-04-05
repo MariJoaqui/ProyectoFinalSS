@@ -89,33 +89,62 @@ $dia2 = date('l', strtotime($FechaFin));
                     <?php
 
                     for ($i = $FechaInicio; $i <= $FechaFin; $i = date("Y-m-d", strtotime($i . "+1 days"))){
-                        echo "<h5>" . $dias = date('l', strtotime($i)) . " - " .
+                        echo "<h5><b>" . $dias = date('l', strtotime($i)) . "</b> - " .
                             $Dia = date('d', strtotime($i)) . "/" . 
                             $Mes = date('m', strtotime($i)) . "/" .
-                            $Año = date('Y', strtotime($i)) . "</h5><br>";
+                            $Año = date('Y', strtotime($i)) . "</h5>";
 
-                            if(date('l', strtotime($i)) === 'Monday'){
-                                echo 'holi';
-                            }
-                            else if (date('l', strtotime($i)) === 'Tuesday'){
-                                echo 'holi de nuevo';
-                            }
-                            else if (date('l', strtotime($i)) === 'Wednesday'){
+                            if (date('l', strtotime($i)) === 'Monday' || date('l', strtotime($i)) === 'Tuesday' ||
+                                date('l', strtotime($i)) === 'Wednesday' || date('l', strtotime($i)) === 'Thursday' ||
+                                date('l', strtotime($i)) === 'Friday'){
+                                
+                                if (date('g', strtotime($HoraInicio)) === '6' || date('g', strtotime($HoraInicio)) === '7' ||
+                                    date('g', strtotime($HoraInicio)) === '8' || date('g', strtotime($HoraInicio)) === '9'){
+                                    
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else if (date('g', strtotime($HoraInicio)) === '11' || date('g', strtotime($HoraInicio)) === '12' ||
+                                        date('g', strtotime($HoraInicio)) === '1'){
+                                    
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else if (date('g', strtotime($HoraInicio)) === '5' || date('g', strtotime($HoraInicio)) === '6' ||
+                                        date('g', strtotime($HoraInicio)) === '7'){
 
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else {
+                                    echo "<h5> -> Se habilita el sentido Sur - Norte</h5>";
+                                }
                             }
-                            else if (date('l', strtotime($i)) === 'Thursday'){
+
+                            else if (date('l', strtotime($i)) === 'Saturday' || date('l', strtotime($i)) === 'Sunday'){
                                 
+                                if (date('g', strtotime($HoraInicio)) === '1' || date('g', strtotime($HoraInicio)) === '2' ||
+                                    date('g', strtotime($HoraInicio)) === '3'){
+                                    
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else if (date('g', strtotime($HoraInicio)) === '6' || date('g', strtotime($HoraInicio)) === '7' ||
+                                        date('g', strtotime($HoraInicio)) === '8'){
+
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else if (date('g', strtotime($HoraInicio)) === '7' || date('g', strtotime($HoraInicio)) === '8' ||
+                                        date('g', strtotime($HoraInicio)) === '9'){
+
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else if (date('g', strtotime($HoraInicio)) === '4' || date('g', strtotime($HoraInicio)) === '5' ||
+                                        date('g', strtotime($HoraInicio)) === '6' || date('g', strtotime($HoraInicio)) === '7' || 
+                                        date('g', strtotime($HoraInicio)) === '8' || date('g', strtotime($HoraInicio)) === '9'){
+
+                                    echo "<h5> -> Se habilita el sentido Norte - Sur</h5>";
+                                }
+                                else {
+                                    echo "<h5> -> Se habilita el sentido Sur - Norte</h5>";
+                                }
                             }
-                            else if (date('l', strtotime($i)) === 'Friday'){
-                                
-                            }
-                            else if (date('l', strtotime($i)) === 'Saturday'){
-                                
-                            }
-                            else {
-                                echo 'si';
-                            }
-                            
                     }
 
                     ?>
