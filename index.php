@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    
 </head>
 <body class="grey darken-1">
 
