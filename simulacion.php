@@ -1,7 +1,5 @@
 <?php
 
-$num_dias = 0;
-
 $FechaInicio = $_POST['FechaInicio'];
 $HoraInicio = $_POST['HoraInicio'];
 $FechaFin = $_POST['FechaFin'];
@@ -9,12 +7,6 @@ $HoraFin = $_POST['HoraFin'];
 
 $dia1 = date('l', strtotime($FechaInicio));
 $dia2 = date('l', strtotime($FechaFin));
-
-for ($y = $FechaInicio; $y <= $FechaFin; $y = date("Y-m-d", strtotime($y . "+1 days"))){
-    $num_dias++;
-}
-
-$nombre_dias = [$num_dias];
 
 ?>
 
@@ -56,7 +48,7 @@ $nombre_dias = [$num_dias];
     </ul>
     
     <div class="container">
-        <form class="col s12" action="simulacion.php" method="post">
+        <form class="col s12" action="index.php" method="post">
             <div class="row">
                 <div class="col s12">
                     <h4>Organización del sentido vehicular de la nueva vía:</h4>
@@ -65,7 +57,7 @@ $nombre_dias = [$num_dias];
                 </div>
 
                 <div class="col 2">
-                    Monday = Lunes
+                    (Monday = Lunes
                 </div>
 
                 <div class="col 2">
@@ -89,7 +81,7 @@ $nombre_dias = [$num_dias];
                 </div>
 
                 <div class="col 2">
-                    Sunday = Domingo
+                    Sunday = Domingo)
                 </div>
             
                 <div class="col s12">
@@ -97,7 +89,33 @@ $nombre_dias = [$num_dias];
                     <?php
 
                     for ($i = $FechaInicio; $i <= $FechaFin; $i = date("Y-m-d", strtotime($i . "+1 days"))){
-                        echo "<h5>" . $dias = date('l', strtotime($i)) . "</h5><br>";
+                        echo "<h5>" . $dias = date('l', strtotime($i)) . " - " .
+                            $Dia = date('d', strtotime($i)) . "/" . 
+                            $Mes = date('m', strtotime($i)) . "/" .
+                            $Año = date('Y', strtotime($i)) . "</h5><br>";
+
+                            if(date('l', strtotime($i)) === 'Monday'){
+                                echo 'holi';
+                            }
+                            else if (date('l', strtotime($i)) === 'Tuesday'){
+                                echo 'holi de nuevo';
+                            }
+                            else if (date('l', strtotime($i)) === 'Wednesday'){
+
+                            }
+                            else if (date('l', strtotime($i)) === 'Thursday'){
+                                
+                            }
+                            else if (date('l', strtotime($i)) === 'Friday'){
+                                
+                            }
+                            else if (date('l', strtotime($i)) === 'Saturday'){
+                                
+                            }
+                            else {
+                                echo 'si';
+                            }
+                            
                     }
 
                     ?>
@@ -105,7 +123,7 @@ $nombre_dias = [$num_dias];
                 </div>
 
                 <div class="col s12">
-                    <button class="btn waves-effect waves-light black white-text" type="submit" name="action">resultado</button>
+                    <button class="btn waves-effect waves-light black white-text" type="submit" name="action">Inicio</button>
                 </div>
             </div>
         </form>
